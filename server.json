@@ -1,0 +1,109 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.crosswirepay/crosswire",
+  "title": "Crosswire - payment infrastructure pricing, coverage and stack design",
+  "description": "Indicative pricing, coverage and stack design for high-risk and crypto payment infrastructure.",
+  "version": "1.0.1",
+  "websiteUrl": "https://crosswirepay.com/connect",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://crosswirepay.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "listing_contract_version": "mcp-listing-2026-09-14-v2",
+      "build": "cw-20261015T070455Z-s726fb8a",
+      "connect_url": "https://crosswirepay.com/connect",
+      "documentation_url": "https://crosswirepay.com/developers",
+      "capability_level": "read",
+      "categories": [
+        "payments",
+        "fintech",
+        "crypto",
+        "infrastructure",
+        "high-risk",
+        "orchestration",
+        "cross-border-settlement"
+      ],
+      "tools": [
+        {
+          "name": "search",
+          "capability_level": "read",
+          "description": "Default first call. Returns routed results across FAQ, solutions, coverage and the pricing entry point."
+        },
+        {
+          "name": "fetch",
+          "capability_level": "read",
+          "description": "Returns the full grounded text for an id that search returned."
+        },
+        {
+          "name": "get_indicative_price",
+          "capability_level": "read",
+          "description": "The only pricing source. Returns a bounded indicative range for a product, volume and market."
+        },
+        {
+          "name": "list_solutions",
+          "capability_level": "read",
+          "description": "Lists the capabilities and rails Crosswire can put in a stack."
+        },
+        {
+          "name": "check_coverage",
+          "capability_level": "read",
+          "description": "Answers which regions, countries and markets a capability is available in."
+        },
+        {
+          "name": "recommend_stack",
+          "capability_level": "read",
+          "description": "Returns the products that fit a described business, with no price."
+        },
+        {
+          "name": "request_offer",
+          "capability_level": "write",
+          "description": "Records a single-rail enquiry or a target rate for the commercial team. Requires stated consent."
+        },
+        {
+          "name": "create_solution_offer",
+          "capability_level": "write",
+          "description": "Creates the indicative commercial offer for a designed stack. The offer link is emailed, never returned here."
+        },
+        {
+          "name": "book_advisory",
+          "capability_level": "write",
+          "description": "Books a call with a person at Crosswire."
+        },
+        {
+          "name": "get_faq",
+          "capability_level": "read",
+          "description": "Grounding answers and a routing map, for when the right tool is unclear."
+        },
+        {
+          "name": "ask_integration",
+          "capability_level": "read",
+          "description": "Answers how a rail is integrated, sequenced and operated day to day."
+        },
+        {
+          "name": "assess_business",
+          "capability_level": "read",
+          "description": "Reads a described business or current setup and returns its needs and gaps."
+        },
+        {
+          "name": "design_stack",
+          "capability_level": "read",
+          "description": "Returns an architecture: the rails, their dependencies and the order to build them."
+        },
+        {
+          "name": "compare_stack_scenarios",
+          "capability_level": "read",
+          "description": "Compares two or more described architectures at capability level."
+        },
+        {
+          "name": "submit_partner_application",
+          "capability_level": "write",
+          "description": "Submits an application to join the Crosswire partner network."
+        }
+      ]
+    }
+  }
+}
